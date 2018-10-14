@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if flash %}
+<p type=error>flash.message</p>
+{% endif %}
+<h1>Log in</h1>
+<p>If you don't have an account, you may <a href="/signup">signup</a> for one</p>
+<form action="/login" method="post">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input name="username" class="form-control" type="text" value="{{ username }}">
+        <p type='error'>{{username_error}}</p>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input name="password" class="form-control" type="password">
+        <p type='error'>{{password_error}}</p>
+    </div>
+    <input type="submit" value="Login" class="btn btn-default">
+</form>
+{% endblock %}

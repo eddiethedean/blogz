@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>{{ title }}</title>
+        <title>{{title}}</title>
         <style>
             .error {
                 color: red;
@@ -10,9 +10,14 @@
     </head>
 <body>
 
+    <h1>{{title}}</h1>
+
     <div>
-        <a href='/blog'>Main Blog Page</a>
-        <a href='/newpost'>Add a Blog Entry</a>
+        <a href='/'>Home</a>
+        <a href='/blog'>all posts</a>
+        <a href='/newpost'>new post</a>
+        <a href='/login'>login</a>
+        <a href='/logout'>logout</a>
     </div>
 
     {% block content %}
